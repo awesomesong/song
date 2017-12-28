@@ -298,7 +298,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="my-signin2"></div>
+		<div id="my-signin2" data-onsuccess="onSignIn"></div>
 		  <script>
 		    function onSuccess(googleUser) {
 		      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
@@ -317,43 +317,16 @@
 			'onfailure': onFailure
 		      });
 		    }
-			/**
- * The Sign-In client object.
- */
-var auth2;
-
-/**
- * Initializes the Sign-In client.
- */
-var initClient = function() {
-    gapi.load('auth2', function(){
-        /**
-         * Retrieve the singleton for the GoogleAuth library and set up the
-         * client.
-         */
-        auth2 = gapi.auth2.init({
-            client_id: 'CLIENT_ID.apps.googleusercontent.com'
-        });
-
-        // Attach the click handler to the sign-in button
-        auth2.attachClickHandler('signin-button', {}, onSuccess, onFailure);
-    });
-};
-
-/**
- * Handle successful sign-ins.
- */
-var onSuccess = function(user) {
-    console.log('Signed in as ' + user.getBasicProfile().getName());
- };
-
-/**
- * Handle sign-in failures.
- */
-var onFailure = function(error) {
-    console.log(error);
-};
 		  </script>
+		<a href="#" onclick="signOut();">Sign out</a>
+		<script>
+		  function signOut() {
+		    var auth2 = gapi.auth2.getAuthInstance();
+		    auth2.signOut().then(function () {
+		      console.log('User signed out.');
+		    });
+		  }
+		</script>
 		<!-- 하이트진로 컨텐츠  -->
 		<div class="hitejinro_container_wrap">
 			<div class="hitejinro_product">
