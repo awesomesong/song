@@ -298,7 +298,13 @@
 				</div>
 			</div>
 		</div>
-		<div id="my-signin2" data-onsuccess="onSignIn"></div>
+		<div class="g-signin2"
+		  data-scope="https://www.googleapis.com/auth/plus.login"
+		  data-clientid="YOUR_CLIENT_ID"
+		  data-accesstype="offline"
+		  data-onsuccess="onSignIn"
+		  data-onfailure="onSignInFailure">
+		</div>
 		  <script>
 		    function onSuccess(googleUser) {
 		      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
@@ -326,6 +332,15 @@
 		      console.log('User signed out.');
 		    });
 		  }
+			
+			auth2 = gapi.auth2.init({
+			  client_id: '716283752175-v5bn3gurqkvmg0lojmjqr3t8a213kltb.apps.googleusercontent.com',
+			  scope: 'https://www.googleapis.com/auth/plus.login'
+			});
+
+			...
+
+			auth2.grantOfflineAccess().then(signInCallback);
 		</script>
 		<!-- 하이트진로 컨텐츠  -->
 		<div class="hitejinro_container_wrap">
