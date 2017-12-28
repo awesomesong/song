@@ -11,12 +11,14 @@
 	<meta name="keywords" content="하이트진로, 하이트진로주식회사, 하이트, 참이슬, 공장위치, 하이트진로 소식"/>
 	<meta name="author" content="강송희"/>
   	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+	<meta name="google-signin-client_id" >
 	<title>하이트진로</title>
 	<link href="css/reset.css" rel="stylesheet" type="text/css">
 	<link href="css/common.css" rel="stylesheet" type="text/css">
 	<link href="css/layout.css" rel="stylesheet" type="text/css"><!-- header 와 footer -->
 	<link href="css/hitejinro.css" rel="stylesheet" type="text/css">
 	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 </head>
 <body>
 	<div class="hitejinro_wrap">
@@ -296,6 +298,26 @@
 				</div>
 			</div>
 		</div>
+		<div id="my-signin2"></div>
+		  <script>
+		    function onSuccess(googleUser) {
+		      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+		    }
+		    function onFailure(error) {
+		      console.log(error);
+		    }
+		    function renderButton() {
+		      gapi.signin2.render('my-signin2', {
+			'scope': 'profile email',
+			'width': 240,
+			'height': 50,
+			'longtitle': true,
+			'theme': 'dark',
+			'onsuccess': onSuccess,
+			'onfailure': onFailure
+		      });
+		    }
+		  </script>
 		<!-- 하이트진로 컨텐츠  -->
 		<div class="hitejinro_container_wrap">
 			<div class="hitejinro_product">
