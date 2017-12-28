@@ -405,6 +405,12 @@
 			  alert(JSON.stringify(error, undefined, 2));
 			});
 		  }
+			function signOut() {
+		    var auth2 = gapi.auth2.getAuthInstance();
+		    auth2.signOut().then(function () {
+		      console.log('User signed out.');
+		    });
+		  }
 		</script>
 		<div id="gSignInWrapper">
 		    <span class="label">Sign in with:</span>
