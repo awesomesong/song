@@ -1,19 +1,20 @@
-.wrap {position:relative; width:1280px; height:800px; padding:55px 0 35px 50px; /*outline:2px solid red*/}
-.quiz_header {position:relative; width:auto; height:auto}
-.quiz_title {width:auto; height:auto;}
+.wrap {position:relative; width:1180px; height:800px; padding:55px 50px 35px; background-color:#ff99bb}
+.quiz_header {position:relative; width:auto; height:60px; background-color:#fff; border-radius:30px}
+.quiz_title {width:auto; height:100%}
 
-.quiz_result {/*outline:2px solid blue;*/ position: absolute; left:-23px; top:-20px; width:100px; height:100px}
-.quiz_result_O {display:none; position: absolute; width:100%; height:100%; background: url("../images/checkdo_o.png") no-repeat center center; animation: zoom 200ms ease-in-out; /*background-size: 40px*/}
-.quiz_result_X {display:none; position: absolute; width:100%; height:100%; background: url("../images/checkdo_x.png") no-repeat center center; animation: zoom 200ms ease-in-out; /*background-size: 40px*/}
+.quiz_result {position: absolute; left:20px; top:-17px; width:100px; height:100px}
+.quiz_result_O {display:none; position: absolute; width:100%; height:100%; background: url("../images/checkdo_o.png") no-repeat center center; animation: zoom 200ms ease-in-out}
+.quiz_result_X {display:none; position: absolute; width:100%; height:100%; background: url("../images/checkdo_x.png") no-repeat center center; animation: zoom 200ms ease-in-out}
 
-.quiz_number {display:inline-block; padding:6px 21px 0px; background-color:coral; color:#efefef; font-size:30px; border-radius:50%}
-.quiz_content {display:inline-block; margin-left:15px; font-size:28px}
+.quiz_number {display:inline-block; padding:6px 20px 0px; margin-left:45px; background-color:#ff4da6; color:#efefef; font-size:30px; border-radius:50%}
+.quiz_content {display:inline-block; width:auto; height:56px; margin-left:15px; font-size:28px; vertical-align:bottom; line-height:62px}
+.quiz_content_middle {display:inline-block; width:auto; height:100%; vertical-align:bottom; line-height:62px}
 
-.quiz_step {/*outline:2px solid pink;*/ position:absolute; right:80px; top:70px; cursor:pointer}
-.quiz_step_img {width:120px; height:50px; background: url("../images/b_r_answer.png") no-repeat center center}
+.quiz_step {position:absolute; right:55px; top:59px; cursor:pointer}
+.quiz_step_img {width:120px; height:50px; margin-top:3px; background: url("../images/b_r_answer.png") no-repeat center center}
 .quiz_step_txt {display:none; width:100px; padding:11px 0 9px; border-radius:50px; border:5px solid #eee; background-color:blueviolet; color:#dfdfdf; font-size:16px; text-align:center; box-sizing: content-box; animation: zoom 1.9s ease-in-out infinite alternate;}
 
-.quiz_answer_box {/*outline:2px solid orange; */display:flex; flex-direction: row; margin-top:45px; padding-left:70px;}
+.quiz_answer_box {display:flex; flex-direction: row; width:auto; height:650px; margin-top:45px; padding-left:70px; padding-top:30px; background:#fff url('../images/math.jpg') no-repeat 950px 475px; background-size:200px; border-radius:40px}
 .quiz_answer_list {position:relative; margin-right:10px; font-size:26px}
 .quiz_answer_radio {display:inline-block; width:0px; height:0px; visibility:hidden}
 .quiz_answer_list_txt {display:inline-block; width:100px}
